@@ -10,7 +10,7 @@ export class ContactsListComponent implements OnInit {
   contacts;
   constructor() {
     this.contacts = [
-        {
+      {
           firstName: 'John',
           lastName:  'Doe',
           email:     'john@example.com'

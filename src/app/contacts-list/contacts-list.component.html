@@ -1,12 +1,13 @@
-<p>
-  contacts-list works!
-</p>
+<div style="text-align: center">
+    
+    <!-- first is name you will use to call data, second is name of var from ts file -->
+    <ul *ngFor="let contact of contacts" style="list-style: none">
+      <li  class="">
+        {{contact.firstName}} {{contact.lastName}} | {{contact.email}}
+      </li>
+        <button class="btn btn-danger" (click)="removeContact(contact)">Delete</button>
+    </ul>
 
-<!-- first is name you will use to call data, second is name of var from ts file -->
-<ul *ngFor="let contact of contacts">
-  <li (click)="removeContact(contact)">
-    {{contact.firstName}} {{contact.lastName}} | {{contact.email}}
-  </li>
-</ul>
+</div>
 
 
