@@ -4,9 +4,10 @@
 
 <!-- first is name you will use to call data, second is name of var from ts file -->
 <ul *ngFor="let contact of contacts">
-  <li *ngIf="contact.firstName == 'Martin' ">
+  <li *ngIf="contact.firstName == 'Martin' && contact.lastName == 'Hess' ">
     {{contact.firstName}} {{contact.lastName}} | {{contact.email}}
   </li>
 
 </ul>
+
 
