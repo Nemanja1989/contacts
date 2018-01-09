@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsListComponent implements OnInit {
 
   contacts;
+  testModel = 'testina';
+
   constructor() {
     this.contacts = [
       {
