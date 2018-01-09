@@ -1,13 +1,20 @@
-<div style="text-align: center">
-
-    <!-- first is name you will use to call data, second is name of var from ts file -->
-    <ul *ngFor="let contact of contacts" style="list-style: none">
-      <li  class="">
-        {{contact.firstName}} {{contact.lastName}} | {{contact.email}}
-      </li>
-        <button class="btn btn-danger" (click)="removeContact(contact)">Delete</button>
-    </ul>
-
-</div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Menu</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-light" *ngFor="let contact of contacts">
+            <td>{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+            <td>{{contact.email}}</td>
+            <td><button class="btn btn-danger" (click)="removeContact(contact)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
 
 
