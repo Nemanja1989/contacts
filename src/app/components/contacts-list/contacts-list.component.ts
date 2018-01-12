@@ -14,8 +14,10 @@ export class ContactsListComponent implements OnInit {
     contacts;
     searchTerm = '';
 
-    constructor() {
-        this.contacts = ContactsService.getContacts();
+    constructor(private _contactsService: ContactsService) {
+        this._contactsService.getContacts().subscribe(contacts => {
+             this.contacts = contacts;
+        });
     }
 
     removeContact(contact) {

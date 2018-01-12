@@ -1,3 +1,23 @@
-<p>
-  messages works!
-</p>
+<div class="container">
+
+    <p>
+        messages works!
+    </p>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-light" *ngFor="let message of messages ">
+            <td>{{message.title | uppercase}}</td>
+            <td>{{message.content}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+

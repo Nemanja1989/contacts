@@ -11,6 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ContactsService } from './services/contacts.service';
+import {MessagesLoadService} from './services/messages-load.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -34,10 +36,12 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
         appRoutes
-    )
+    ),
+    HttpClientModule
   ],
   providers: [
-      ContactsService
+      ContactsService,
+      MessagesLoadService
   ],
   bootstrap: [AppComponent]
 })
